@@ -14,7 +14,8 @@ export class ProductListComponent {
     imageUrl: '/assets/images/iphone.jpg',
     inStock: 7
   };
-  name: string = 'Test'
+  name: string = 'Test';
+  addToCart: number = 0;
 
   productInStock() {
     return !(this.product.inStock > 0);
@@ -26,5 +27,16 @@ export class ProductListComponent {
 
   onChange(event: any) {
     this.name = event.target.value;
+  }
+
+  decrement() {
+    if (this.addToCart == 0) {
+      return;
+    }
+    this.addToCart--;
+  }
+
+  increment() {
+    this.addToCart++;
   }
 }

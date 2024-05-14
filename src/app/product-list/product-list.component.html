@@ -1,15 +1,23 @@
-<!-- Property Binding - any attribute decorated with square brackets - in the quotes we can write any TS expression -->
-<img [src] = "product.imageUrl" height="400" width="400"/>
-<p>{{product.name}}</p>
-<p>${{product.price}}</p>
-<p>{{product.color}}</p>
-<!-- A function call inside curly braces -->
-<p>{{getDiscountedPrice()}}</p> 
-<p>{{product.inStock > 0 ?'Only '+ product.inStock + ' in stock!' : 'Out of stock!'}}</p>
+<div class="ekart-product-list">
+    <!-- Property Binding - any attribute decorated with square brackets - in the quotes we can write any TS expression -->
+    <img [src]="product.imageUrl" height="400" width="400" />
+    <p>{{product.name}}</p>
+    <p>${{product.price}}</p>
+    <p>{{product.color}}</p>
+    <!-- A function call inside curly braces -->
+    <p>{{getDiscountedPrice()}}</p>
+    <p>{{product.inStock > 0 ?'Only '+ product.inStock + ' in stock!' : 'Out of stock!'}}</p>
 
-<!-- Property Binding - disabled, hidden, checked - these props use only property binding and not string interpolation -->
-<button [disabled]="productInStock()">Buy Now</button>
+    <!-- Property Binding - disabled, hidden, checked - these props use only property binding and not string interpolation -->
+    <button [disabled]="productInStock()">Buy Now</button>
 
-<!-- Event Binding - Use normal brackets $event is passed to capture data from view template to component-->
-<input (input) = "onChange($event)" />
-Input value = {{name}}
+    <!-- Event Binding - Use normal brackets $event is passed to capture data from view template to component-->
+    <input (input)="onChange($event)" />
+    Input value = {{name}}
+</div>
+<div class="ekart-product-list">
+    <button (click)="decrement()">-</button>
+    <span>{{addToCart}}</span>
+    <button (click)="increment()">+</button>
+
+</div>
