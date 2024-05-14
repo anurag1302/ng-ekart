@@ -10,7 +10,8 @@ export class ProductListComponent {
     name: 'iPhone 14',
     price: 999,
     color: 'Black',
-    discount: 5
+    discount: 5,
+    imageUrl:'/assets/images/iphone.jpg'
   }
 
   getDiscountedPrice() {
