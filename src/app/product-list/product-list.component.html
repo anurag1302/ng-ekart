@@ -5,3 +5,7 @@
 <p>{{product.color}}</p>
 <!-- A function call inside curly braces -->
 <p>{{getDiscountedPrice()}}</p> 
+<p>{{product.inStock > 0 ?'Only '+ product.inStock + ' in stock!' : 'Out of stock!'}}</p>
+
+<!-- Property Binding - disabled, hidden, checked - these props use only property binding and not string interpolation -->
+<button [disabled]="productInStock()">Buy Now</button>

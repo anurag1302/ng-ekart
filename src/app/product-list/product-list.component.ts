@@ -11,7 +11,12 @@ export class ProductListComponent {
     price: 999,
     color: 'Black',
     discount: 5,
-    imageUrl:'/assets/images/iphone.jpg'
+    imageUrl: '/assets/images/iphone.jpg',
+    inStock: 7
+  }
+
+  productInStock() {
+    return !(this.product.inStock > 0);
   }
 
   getDiscountedPrice() {
