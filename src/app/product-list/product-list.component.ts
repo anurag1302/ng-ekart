@@ -9,7 +9,11 @@ export class ProductListComponent {
   product = {
     name: 'iPhone 14',
     price: 999,
-    color: 'Black'
+    color: 'Black',
+    discount: 5
   }
 
+  getDiscountedPrice() {
+    return '$' + (this.product.price - (this.product.price * this.product.discount / 100)).toString();
+  }
 }
