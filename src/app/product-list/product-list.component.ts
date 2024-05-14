@@ -13,7 +13,8 @@ export class ProductListComponent {
     discount: 5,
     imageUrl: '/assets/images/iphone.jpg',
     inStock: 7
-  }
+  };
+  name: string = 'Test'
 
   productInStock() {
     return !(this.product.inStock > 0);
@@ -21,5 +22,9 @@ export class ProductListComponent {
 
   getDiscountedPrice() {
     return '$' + (this.product.price - (this.product.price * this.product.discount / 100)).toString();
+  }
+
+  onChange(event: any) {
+    this.name = event.target.value;
   }
 }

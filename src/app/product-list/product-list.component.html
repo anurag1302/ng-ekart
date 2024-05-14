@@ -9,3 +9,7 @@
 
 <!-- Property Binding - disabled, hidden, checked - these props use only property binding and not string interpolation -->
 <button [disabled]="productInStock()">Buy Now</button>
+
+<!-- Event Binding - Use normal brackets $event is passed to capture data from view template to component-->
+<input (input) = "onChange($event)" />
+Input value = {{name}}
