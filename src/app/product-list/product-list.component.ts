@@ -16,6 +16,7 @@ export class ProductListComponent {
   };
   name: string = 'Test';
   addToCart: number = 0;
+  searchText:string='';
 
   productInStock() {
     return !(this.product.inStock > 0);

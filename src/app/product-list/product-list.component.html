@@ -19,5 +19,10 @@
     <button (click)="decrement()">-</button>
     <span>{{addToCart}}</span>
     <button (click)="increment()">+</button>
-
+</div>
+<!-- Two way binding - using ngModel - combination of property and event binding -->
+<div class="ekart-product-list">
+    <input [(ngModel)]="searchText" />
+    <button class="btn btn-primary">Search</button>
+    <p>You entered: {{searchText}}</p>
 </div>
