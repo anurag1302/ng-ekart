@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../Interfaces/User';
 
 @Component({
   selector: 'app-product-list',
@@ -16,7 +17,9 @@ export class ProductListComponent {
   };
   name: string = 'Test';
   addToCart: number = 0;
-  searchText:string='';
+  searchText: string = '';
+
+
 
   productInStock() {
     return !(this.product.inStock > 0);
@@ -40,4 +43,30 @@ export class ProductListComponent {
   increment() {
     this.addToCart++;
   }
+
+  users: User[] = [{
+    id: 101,
+    firstName: 'John',
+    lastName: 'Doe',
+    dob: new Date(),
+    city: 'NY',
+    isAdmin: true
+  },
+  {
+    id: 102,
+    firstName: 'Mary',
+    lastName: 'Sam',
+    dob: new Date(),
+    city: 'NJ',
+    isAdmin: false
+  },
+  {
+    id: 103,
+    firstName: 'Dave',
+    lastName: 'Batista',
+    dob: new Date(),
+    city: 'Chicago',
+    isAdmin: true
+  }
+  ]
 }

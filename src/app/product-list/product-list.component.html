@@ -26,3 +26,25 @@
     <button class="btn btn-primary">Search</button>
     <p>You entered: {{searchText}}</p>
 </div>
+<div class="ekart-product-list">
+    <table class="table" border="1">
+        <thead>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>City</th>
+            <th>Admin</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.dob.toDateString()}}</td>
+                <td>{{user.city}}</td>
+                <td>{{user.isAdmin}}</td>
+            </tr>
+        </tbody>
+    </table>>
+</div>
